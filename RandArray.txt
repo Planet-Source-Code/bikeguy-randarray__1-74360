@@ -1,0 +1,26 @@
+This application demonstrates a few things:
+
+1) Efficiently randomize an array of user defined type (UDT) items.  Basically, you include a 
+   "randValue" property in definition of the UDT, and any time you want to randomize the order, 
+   set this value to rnd() for each   element, and then sort on that property.  Pretty useful 
+   for a lot of applications.  For example,    I originally wrote this to randomly and 
+   repeatedly select 5-10 items from an array of thousands of members.
+
+2) Includes two quicksort subs which sort the UDT array based on string values and numeric doubles. These
+   are based on several different recursive quicksort routines I have seen and collected on Planet.  One
+   thing which drives me crazy is that if I want to be able to sort an array of UDT elements on different
+   properties, I need a seperate quicksort sub.  Anyone know how to send the UDT property to be sorted
+   on as a parameter?
+
+3) Reads text data from an ASCII file(s).  There are definitely better, more efficient ways to do this, 
+   but this is pure VB6 code that does the trick.
+
+If you like this, please vote.  If you don't like it, don't vote.  I hope somebody finds something useful
+in this.
+
+To use:
+
+1 - Click on the "Build UDT Data" button and enter the number of items you wish to create.  The listbox
+    on the main form will be populated with the UDT items order alphabetically by last name.
+2 - To Randomize the items, click on the "Randomize" button.  You can do this over and over.
+3 - If you want to re-order the UDT items alphabetically, click on the "Alpha" button.
